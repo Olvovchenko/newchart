@@ -1,0 +1,27 @@
+.myform {
+  margin: 20;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  opacity: 0.8;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 11px; /* Specified height */
+  background: grey; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.95; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.5s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.5s;
+  border-radius: 12px;
+}
+
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+  background: gainsboro;
+}
