@@ -25,7 +25,7 @@ const Chart = ({
     setTypeScaleway([false, true]);
   };
   return (
-    <svg width="1000">
+    <svg width="1000" margin="50">
       <g style={{ stroke: "black", strokeWidth: "5px" }}>
         <line x1="133" y1="0" x2="133" y2="135" />
       </g>

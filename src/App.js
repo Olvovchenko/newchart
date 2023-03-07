@@ -33,18 +33,67 @@ function App() {
 
   return (
     <div className="App">
-      <Form
-        id={"storage"}
-        name={"storage"}
-        onChange={changeStorage}
-        detail={storage}
-      />
-      <Form
-        id={"transfer"}
-        name={"transfer"}
-        onChange={changeTransfer}
-        detail={transfer}
-      />
+      <div className="new">
+        <div className="itemzero">0</div>
+        <div
+          style={{
+            marginTop: 55,
+            borderRight: 1,
+            width: 4,
+            height: 27.5,
+            background: "black",
+          }}
+        ></div>
+
+        <Form
+          id={"storage"}
+          name={"storage"}
+          onChange={changeStorage}
+          detail={storage}
+        />
+        <div
+          style={{
+            marginTop: 55,
+            borderLeft: 1,
+            marginLeft: 3.5,
+            width: 4,
+            height: 27.5,
+            background: "black",
+          }}
+        ></div>
+        <div className="item">1000</div>
+      </div>
+
+      <div className="new">
+        <div className="itemzero">0</div>
+        <div
+          style={{
+            marginTop: 55,
+            borderRight: 1,
+            width: 4,
+            height: 27.5,
+            background: "black",
+          }}
+        ></div>
+        <Form
+          id={"transfer"}
+          name={"transfer"}
+          onChange={changeTransfer}
+          detail={transfer}
+        />
+        <div
+          style={{
+            marginTop: 55,
+            borderLeft: 1,
+            marginLeft: 3.5,
+            width: 4,
+            height: 27.5,
+            background: "black",
+          }}
+        ></div>
+        <div className="item">1000</div>
+      </div>
+
       {breakPoint > 900 ? (
         <Chart
           blackBlaze={blackBlaze}

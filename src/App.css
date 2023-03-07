@@ -1,9 +1,20 @@
 .App {
-  text-align: center;
-}
-.App {
-  margin: 28px;
+  margin: 15px;
   display: flex;
-  flex-direction: column;
-  text-align: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.new {
+  display: flex;
+  flex-direction: row;
+}
+.item {
+  align-self: flex-end;
+  margin-left: -18px;
+}
+.itemzero {
+  align-self: flex-end;
+  margin-right: -5px;
 }

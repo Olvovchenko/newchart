@@ -7,6 +7,7 @@ const Form = ({ id, name, onChange, detail }) => {
       <label htmlFor={id}>
         {id} {detail}
       </label>
+
       <input
         className={classes.slider}
         type="range"
@@ -14,7 +15,7 @@ const Form = ({ id, name, onChange, detail }) => {
         name={name}
         min="0"
         max="1000"
-        step="100"
+        step="1"
         onChange={onChange}
       />
     </form>
