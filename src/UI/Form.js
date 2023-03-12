@@ -6,6 +6,7 @@ const Form = ({ id, name, onChange, detail }) => {
     <form className={classes.myform}>
       <label htmlFor={id}>
         {id} {detail}
+        {" GB"}
       </label>
 
       <input

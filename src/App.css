@@ -1,7 +1,15 @@
 .App {
   margin: 15px;
+  width: 700px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Appmobile {
+  display: flex;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -9,7 +17,22 @@
 .new {
   display: flex;
   flex-direction: row;
+  margin-left: 3px;
+  margin-right: 3px;
 }
+.newstorage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -34px;
+}
+.newmobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -318px;
+}
+
 .item {
   align-self: flex-end;
   margin-left: -18px;
@@ -17,4 +40,12 @@
 .itemzero {
   align-self: flex-end;
   margin-right: -5px;
+}
+.picture {
+  margin-top: 40px;
+}
+
+.picturemobile {
+  display: flex;
+  justify-content: center;
 }

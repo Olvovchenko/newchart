@@ -1,5 +1,4 @@
 import React from "react";
-import Icons from "./Icons";
 
 const ChartMobile = ({
   blackBlaze,
@@ -25,20 +24,20 @@ const ChartMobile = ({
     setTypeScaleway([false, true]);
   };
   return (
-    <svg width="1000" height="1000">
+    <svg width="300" height="800">
       <g style={{ stroke: "black", strokeWidth: "5px" }}>
         <line
           x1="133"
           y1="0"
           x2="133"
-          y2="135"
+          y2="195"
           transform="rotate(270,270,240)"
         />
       </g>
 
       <g class="bar">
         <svg
-          x="29"
+          x="31"
           y="380"
           xmlns="http://www.w3.org/2000/svg"
           width="29"
@@ -51,32 +50,29 @@ const ChartMobile = ({
           <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z" />
         </svg>
         <text
-          x={(blackBlaze * 7) / 1.7 + 143}
+          x={(blackBlaze * 7) / 2.2 + 143}
           y="9.5"
           dy=".35em"
           transform="rotate(270,270,240)"
+          font-size="12.8"
         >
-          {blackBlaze}
+          {blackBlaze.toFixed(2)}
+          {"$"}
         </text>
         <rect
           transform="rotate(270,270,240)"
-          width={(blackBlaze * 7) / 1.7}
+          width={(blackBlaze * 7) / 2.2}
           x="136"
           height="29"
           fill={blackBlaze === minPrice ? "red" : "grey"}
         ></rect>
-        <text
-          x="18"
-          y="13.5"
-          style={{ fontSize: 17 }}
-          transform="rotate(270,270,240)"
-        >
+        <text x="45" y="430" style={{ fontSize: 12.5 }} text-anchor="middle">
           blackblaze
         </text>
       </g>
       <g class="bar">
         <svg
-          x="64"
+          x="86"
           y="380"
           xmlns="http://www.w3.org/2000/svg"
           width="29"
@@ -90,66 +86,51 @@ const ChartMobile = ({
         </svg>
         <rect
           transform="rotate(270,270,240)"
-          width={(bunny * 7) / 1.7}
+          width={(bunny * 7) / 2.2}
           height="29"
           x="136"
-          y="35"
+          y="55"
           fill={bunny === minPrice ? "orange" : "grey"}
         ></rect>
         <text
-          x={(bunny * 7) / 1.7 + 143}
-          y="48"
+          x={(bunny * 7) / 2.2 + 143}
+          y="68"
           dy=".35em"
           transform="rotate(270,270,240)"
+          font-size="12.8"
         >
-          {bunny}
+          {bunny.toFixed(2)}
+          {"$"}
         </text>
-        <text
-          x="48"
-          y="45"
-          style={{ fontSize: 17 }}
-          transform="rotate(270,270,240)"
-        >
+        <text x="100" y="430" style={{ fontSize: 12.5 }} text-anchor="middle">
           bunny
         </text>
         <circle
-          transform="rotate(270,270,240)"
-          cx="28"
-          cy="52"
+          cx="114"
+          cy="435"
           r="4"
           stroke="black"
           fill={typeBunny[0] ? "black" : "white"}
           onClick={handleChangeHDD}
         />
         <circle
-          transform="rotate(270,270,240)"
-          cx="65"
-          cy="52"
+          cx="114"
+          cy="447"
           r="4"
           stroke="black"
           fill={typeBunny[0] ? "white" : "black"}
           onClick={handleChangeSSD}
         />
-        <text
-          x="32"
-          y="57"
-          style={{ fontSize: "82%" }}
-          transform="rotate(270,270,240)"
-        >
+        <text x="110" y="439" style={{ fontSize: "10" }} text-anchor="end">
           HDD
         </text>
-        <text
-          x="70"
-          y="57"
-          style={{ fontSize: "82%" }}
-          transform="rotate(270,270,240)"
-        >
+        <text x="110" y="451" style={{ fontSize: "10" }} text-anchor="end">
           SSD
         </text>
       </g>
       <g class="bar">
         <svg
-          x="99"
+          x="141"
           y="380"
           xmlns="http://www.w3.org/2000/svg"
           width="29"
@@ -164,66 +145,51 @@ const ChartMobile = ({
 
         <rect
           transform="rotate(270,270,240)"
-          width={(scaleway * 7 + 1) / 1.7}
+          width={(scaleway * 7 + 1) / 2.2}
           height="29"
           x="136"
-          y="70"
+          y="110"
           fill={scaleway === minPrice ? "purple" : "grey"}
         ></rect>
         <text
-          x={(scaleway * 7) / 1.7 + 144}
-          y="83"
+          x={(scaleway * 7) / 2.2 + 144}
+          y="123"
           dy=".35em"
           transform="rotate(270,270,240)"
+          font-size="12.8"
         >
-          {scaleway}
+          {scaleway.toFixed(2)}
+          {"$"}
         </text>
-        <text
-          x="18"
-          y="80"
-          style={{ fontSize: 17 }}
-          transform="rotate(270,270,240)"
-        >
+        <text x="155" y="430" style={{ fontSize: 12.5 }} text-anchor="middle">
           scaleway
         </text>
         <circle
-          transform="rotate(270,270,240)"
-          cx="10"
-          cy="90"
+          cx="169"
+          cy="435"
           r="4"
           stroke="black"
           fill={typeScaleway[0] ? "black" : "white"}
           onClick={handleChangeMulti}
         />
         <circle
-          transform="rotate(270,270,240)"
-          cx="55"
-          cy="90"
+          cx="169"
+          cy="447"
           r="4"
           stroke="black"
           fill={typeScaleway[0] ? "white" : "black"}
           onClick={handleChangeSingle}
         />
-        <text
-          x="15"
-          y="95"
-          style={{ fontSize: "82%" }}
-          transform="rotate(270,270,240)"
-        >
+        <text x="164" y="439" style={{ fontSize: "12" }} text-anchor="end">
           Multi
         </text>
-        <text
-          x="60"
-          y="95"
-          style={{ fontSize: "82%" }}
-          transform="rotate(270,270,240)"
-        >
+        <text x="164" y="451" style={{ fontSize: "12" }} text-anchor="end">
           Single
         </text>
       </g>
       <g class="bar">
         <svg
-          x="134"
+          x="196"
           y="380"
           xmlns="http://www.w3.org/2000/svg"
           width="29"
@@ -238,26 +204,23 @@ const ChartMobile = ({
 
         <rect
           transform="rotate(270,270,240)"
-          width={(vultr * 7) / 1.7}
+          width={(vultr * 7) / 2.2}
           height="29"
           x="136"
-          y="105"
+          y="165"
           fill={vultr === minPrice ? "blue" : "grey"}
         ></rect>
         <text
-          x={(vultr * 7) / 1.7 + 143}
-          y="118"
+          x={(vultr * 7) / 2.2 + 143}
+          y="178"
           dy=".35em"
           transform="rotate(270,270,240)"
+          font-size="12.8"
         >
-          {vultr}
+          {vultr.toFixed(2)}
+          {"$"}
         </text>
-        <text
-          x="63"
-          y="125"
-          style={{ fontSize: 17 }}
-          transform="rotate(270,270,240)"
-        >
+        <text x="210" y="430" style={{ fontSize: 12.5 }} text-anchor="middle">
           vultr
         </text>
       </g>

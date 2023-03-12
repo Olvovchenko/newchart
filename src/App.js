@@ -7,8 +7,8 @@ import Form from "./UI/Form";
 import ChartMobile from "./chartMobile.js";
 
 function App() {
-  const [storage, setStorage] = useState(5);
-  const [transfer, setTransfer] = useState(7);
+  const [storage, setStorage] = useState(0);
+  const [transfer, setTransfer] = useState(0);
   const [typeBunny, setTypeBunny] = useState([true, false]);
   const [typeScaleway, setTypeScaleway] = useState([true, false]);
 
@@ -32,8 +32,8 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="new">
+    <div className={breakPoint > 780 ? "App" : "Appmobile"}>
+      <div className={breakPoint > 780 ? "new" : "newstorage"}>
         <div className="itemzero">0</div>
         <div
           style={{
@@ -46,7 +46,7 @@ function App() {
         ></div>
 
         <Form
-          id={"storage"}
+          id={"Storage: "}
           name={"storage"}
           onChange={changeStorage}
           detail={storage}
@@ -64,7 +64,7 @@ function App() {
         <div className="item">1000</div>
       </div>
 
-      <div className="new">
+      <div className={breakPoint > 780 ? "new" : "newmobile"}>
         <div className="itemzero">0</div>
         <div
           style={{
@@ -76,7 +76,7 @@ function App() {
           }}
         ></div>
         <Form
-          id={"transfer"}
+          id={"Transfer:"}
           name={"transfer"}
           onChange={changeTransfer}
           detail={transfer}
@@ -93,30 +93,31 @@ function App() {
         ></div>
         <div className="item">1000</div>
       </div>
-
-      {breakPoint > 900 ? (
-        <Chart
-          blackBlaze={blackBlaze}
-          bunny={bunny}
-          scaleway={scaleway}
-          vultr={vultr}
-          typeBunny={typeBunny}
-          setTypeBunny={setTypeBunny}
-          typeScaleway={typeScaleway}
-          setTypeScaleway={setTypeScaleway}
-        />
-      ) : (
-        <ChartMobile
-          blackBlaze={blackBlaze}
-          bunny={bunny}
-          scaleway={scaleway}
-          vultr={vultr}
-          typeBunny={typeBunny}
-          setTypeBunny={setTypeBunny}
-          typeScaleway={typeScaleway}
-          setTypeScaleway={setTypeScaleway}
-        />
-      )}
+      <div className={breakPoint > 780 ? "picture" : "picturemobile"}>
+        {breakPoint > 780 ? (
+          <Chart
+            blackBlaze={blackBlaze}
+            bunny={bunny}
+            scaleway={scaleway}
+            vultr={vultr}
+            typeBunny={typeBunny}
+            setTypeBunny={setTypeBunny}
+            typeScaleway={typeScaleway}
+            setTypeScaleway={setTypeScaleway}
+          />
+        ) : (
+          <ChartMobile
+            blackBlaze={blackBlaze}
+            bunny={bunny}
+            scaleway={scaleway}
+            vultr={vultr}
+            typeBunny={typeBunny}
+            setTypeBunny={setTypeBunny}
+            typeScaleway={typeScaleway}
+            setTypeScaleway={setTypeScaleway}
+          />
+        )}
+      </div>
     </div>
   );
 }

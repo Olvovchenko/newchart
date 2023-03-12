@@ -1,5 +1,4 @@
 import React from "react";
-import Icons from "./Icons";
 
 const Chart = ({
   blackBlaze,
@@ -25,7 +24,7 @@ const Chart = ({
     setTypeScaleway([false, true]);
   };
   return (
-    <svg width="1000" margin="50">
+    <svg width="720" viewBox="0 0 720 150">
       <g style={{ stroke: "black", strokeWidth: "5px" }}>
         <line x1="133" y1="0" x2="133" y2="135" />
       </g>
@@ -44,7 +43,8 @@ const Chart = ({
           <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z" />
         </svg>
         <text x={blackBlaze * 7 + 143} y="9.5" dy=".35em">
-          {blackBlaze}
+          {blackBlaze.toFixed(2)}
+          {"$"}
         </text>
         <rect
           width={blackBlaze * 7}
@@ -78,7 +78,8 @@ const Chart = ({
           fill={bunny === minPrice ? "orange" : "grey"}
         ></rect>
         <text x={bunny * 7 + 143} y="48" dy=".35em">
-          {bunny}
+          {bunny.toFixed(2)}
+          {"$"}
         </text>
         <text x="1" y="45" style={{ fontSize: 17 }}>
           bunny
@@ -129,7 +130,8 @@ const Chart = ({
           fill={scaleway === minPrice ? "purple" : "grey"}
         ></rect>
         <text x={scaleway * 7 + 144} y="83" dy=".35em">
-          {scaleway}
+          {scaleway.toFixed(2)}
+          {"$"}
         </text>
         <text x="1" y="80" style={{ fontSize: 17 }}>
           scaleway
@@ -180,7 +182,8 @@ const Chart = ({
           fill={vultr === minPrice ? "blue" : "grey"}
         ></rect>
         <text x={vultr * 7 + 143} y="118" dy=".35em">
-          {vultr}
+          {vultr.toFixed(2)}
+          {"$"}
         </text>
         <text x="1" y="116.5" style={{ fontSize: 17 }}>
           vultr
